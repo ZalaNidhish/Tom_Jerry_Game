@@ -48,27 +48,22 @@ document.onkeydown = function(e){
 		},700);
 	}
 
-    if(e.keyCode==13 || e.keyCode==32){
+	if(e.keyCode==13 || e.keyCode==32){
 		tom = document.querySelector('.tom');
 		tom.classList.add('aniTom');
 
-           setInterval(() => {
-            if(collision==false){
-                score += 10
-                updateScore(score)
-            }
-           }, 500);
-                                
-                // setInterval(() => {                    
-                //     score += 10
-                //     updateScore(score)
-                // }, 1000);
-            }
+          	setInterval(() => {
+            		if(collision==false){
+                		score += 10
+                		updateScore(score)
+            		}
+           	}, 500);
+        }
 
 		setTimeout(function(){
 		audio.play()
 		},100);
 		gameOver.style.visibility = 'hidden';
-	}
+}
 	
 setInterval(checkcollision, 100);
