@@ -11,6 +11,8 @@ document.onkeydown = function(e){
 		jerry.classList.add('aniJerry');
 		audiojump.play();
 		setTimeout(function(){
+			score+=1;
+			updateScore(score);
 			jerry.classList.remove('aniJerry')
 		},700);
 	}
@@ -61,14 +63,7 @@ setInterval(function(){
 		tom.classList.remove('aniTom');
 		audiogo.play();
 		audio.pause();
-	}
-	
-	
-	else{
-		score+=1;
-		updateScore(score);
-	}
-		
+	}		
 }, 100);
 
 function updateScore(score){
