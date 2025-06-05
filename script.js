@@ -11,7 +11,7 @@ document.onkeydown = function(e){
 		jerry.classList.add('aniJerry');
 		audiojump.play();
 		setTimeout(function(){
-			score+=1;
+			score+=10;
 			updateScore(score);
 			jerry.classList.remove('aniJerry')
 		},700);
